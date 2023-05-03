@@ -5,10 +5,28 @@ const randomInt = (min, max) =>
 const randomColor = () =>
   `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
 
-const square = document.querySelectorAll(".square");
+const squares = document.querySelectorAll(".square");
+const container = document.querySelector('.container')
 
-square.forEach((box) =>
-  box.addEventListener("click", function (e) {
+squares.forEach((square) =>
+  square.addEventListener("click", function (e) {
     this.style.backgroundColor = randomColor();
   })
 );
+
+const mess = document.querySelector(".mess");
+//chatGPT
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+function shuffleSquares() {
+  const squaresArray = Array.from(squares);
+  const shuffledSquaresArray = shuffleArray(squaresArray);
+  shuffledSquaresArray.forEach((square) => container.appendChild(square));
+}
+
+mess.addEventListener('click', shuffleSquares)
