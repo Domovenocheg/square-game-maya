@@ -3,13 +3,14 @@
   grid-template-columns: repeat(auto-fill, 50px);
   max-width: 100vw;
   max-height: 100vh;
-  overflow: hidden;
+  background: rgb(85, 250, 242);
 }
 .square {
   width: 50px;
   height: 50px;
   display: inline-block;
   background-color: rgb(85, 250, 242);
+  border-radius: 0px;
 }
 .mess {
   width: 50px;
@@ -23,22 +24,119 @@
   width: 30px;
   height: 30px;
 }
+.size {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.img-size {
+  width: 30px;
+  height: 30px;
+}
+.star-polygon {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+.star {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.img-star {
+  width: 30px;
+  height: 30px;
+}
+.heart {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.img-heart {
+  width: 30px;
+  height: 30px;
+}
+.heart-polygon {
+  clip-path: polygon(
+    21.18% 25%,
+    37.52% 27.14%,
+    49.82% 38.11%,
+    59.62% 27.14%,
+    76.11% 25%,
+    89.17% 32.07%,
+    95.75% 44.35%,
+    100% 61.1%,
+    87.7% 76.92%,
+    70.44% 87.1%,
+    49.82% 99.25%,
+    29.93% 87.1%,
+    12.84% 76.66%,
+    0.25% 61.1%,
+    2.91% 44.35%,
+    8.78% 32.07%
+  );
+}
+.button:active {
+  background: #cc6060;
+}
 
 @media screen and (max-width: 480px) {
   .square {
-    width: 30px;
-    height: 30px;
+    width: 34.3px;
+    height: 34.3px;
     display: inline-block;
   }
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 30px);
+    grid-template-columns: repeat(auto-fill, 34.3px);
   }
   .mess {
-    width: 30px;
-    height: 30px;
+    width: 34.3px;
+    height: 34.3px;
+  }
+  .star {
+    width: 34.3px;
+    height: 34.3px;
   }
   .img-mess {
+    width: 20px;
+    height: 20px;
+  }
+  .img-star {
+    width: 20px;
+    height: 20px;
+  }
+  .size {
+    width: 34.3px;
+    height: 34.3px;
+  }
+  .img-size {
+    width: 20px;
+    height: 20px;
+  }
+  .heart {
+    width: 34.3px;
+    height: 34.3px;
+  }
+  .img-heart {
     width: 20px;
     height: 20px;
   }
