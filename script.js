@@ -102,3 +102,16 @@ const changeDiamond = function () {
 };
 
 diamond.addEventListener("click", changeDiamond);
+
+function removeStyles(square) {
+  square.style.borderRadius = "0px";
+  square.classList.remove("star-polygon");
+  square.classList.remove("heart-polygon");
+}
+
+//показывает фото Майи
+const maya = document.querySelector(".maya");
+
+maya.addEventListener("click", function (e) {
+  container.innerHTML = `<img class="photo" src="photo_2023-04-17_15-14-28.jpg" alt="photo">`;
+});
