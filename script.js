@@ -31,6 +31,14 @@ function shuffleSquares() {
 
 mess.addEventListener("click", shuffleSquares);
 
+//сменить цвета всех квадратов
+const messColor = document.querySelector(".mess-color");
+messColor.addEventListener("click", function () {
+  squares.forEach((square) => {
+    square.style.backgroundColor = randomColor();
+  });
+});
+
 //change size of squares
 
 const size = document.querySelector(".size");
