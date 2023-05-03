@@ -49,10 +49,12 @@ const changeShape = function () {
       square.classList.remove("star-polygon");
       square.style.borderRadius = "50px";
       square.classList.remove("heart-polygon");
+      square.classList.remove("diamond-poligon");
     } else {
       square.style.borderRadius = "0px";
       square.classList.remove("star-polygon");
       square.classList.remove("heart-polygon");
+      square.classList.remove("diamond-poligon");
     }
   });
 };
@@ -67,6 +69,7 @@ const changeStar = function () {
     square.style.borderRadius = "0px";
     square.classList.remove("heart-polygon");
     square.classList.toggle("star-polygon");
+    square.classList.remove("diamond-poligon");
   });
 };
 
@@ -79,8 +82,23 @@ const changeheart = function () {
   squares.forEach((square) => {
     square.style.borderRadius = "0px";
     square.classList.remove("star-polygon");
+    square.classList.remove("diamond-poligon");
     square.classList.toggle("heart-polygon");
   });
 };
 
 heart.addEventListener("click", changeheart);
+
+//change to diamond
+const diamond = document.querySelector(".diamond");
+
+const changeDiamond = function () {
+  squares.forEach((square) => {
+    square.style.borderRadius = "0px";
+    square.classList.remove("star-polygon");
+    square.classList.remove("heart-polygon");
+    square.classList.toggle("diamond-poligon");
+  });
+};
+
+diamond.addEventListener("click", changeDiamond);
